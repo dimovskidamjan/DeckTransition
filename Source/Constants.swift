@@ -14,7 +14,7 @@ struct Constants {
     
     /// The corner radius applied to the presenting and presented view
     /// controllers's views
-    static let cornerRadius: CGFloat = 8
+    static let cornerRadius: CGFloat = 0
     
     /// The alpha value of the presented view controller's view
     static let alphaForPresentingView: CGFloat = 0.8
