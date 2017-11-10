@@ -577,8 +577,8 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
   ///   the container view in the vertical direction
   private func updatePresentedViewForTranslation(inVerticalDirection translation: CGFloat) {
     
-    let elasticThreshold: CGFloat = 360
-    let dismissThreshold: CGFloat = 380
+    let elasticThreshold: CGFloat = 120
+    let dismissThreshold: CGFloat = 240
     
     let translationFactor: CGFloat = 1/2
     
