@@ -1,5 +1,31 @@
 ## Changelog
 
+## 2.0.0 Release notes (8/12/2017)
+----
+
+DeckTransition is now at version 2.0! 🎉
+
+This is a major API upgrade. The previous API which required `UIScrollViewDelegate` conformance has been entirely removed, and is replaced by an automatic `UIScrollView` detection mechanism.
+
+### API Breaking Changes
+- The `isDismissEnabled` property on `DeckTransitioningDelegate` is removed. This behaviour is now managed automatically, which means that your old dismissal code is no longer needed and can be removed entirely, and your existing view controllers should "just work" in most cases.
+
+  There exist some edge cases with the new mechanism, more about which, including workarounds, can be found in the documentationʼs new [UIScrollView detection guide](https://harshilshah.github.io/DeckTransition/uiscrollview-detection.html).
+
+### Other Changes
+- A new `isSwipeToDismissEnabled` parameter is added to the `DeckTransitioningDelegate` initializer, to disable the swipe-to-dismiss gesture entirely, if need be. This is set to `true` by default and requires no change to retain previous behaviour.
+
+## 1.4.2 Release notes (12/11/2017)
+----
+
+- Fixed an issue where animations were incorrect on older versions of iOS
+
+## 1.4.1 Release notes (9/11/2017)
+----
+
+- Added [documentation](https://harshilshah.github.io/DeckTransition/), generated using [Jazzy](https://github.com/realm/jazzy)
+- Fixed an animation glitch when presenting a modal with the push style
+
 ## 1.4.0 Release notes (21/10/2017)
 
 - Updated animations to work much better when presenting mutliple view controllers using DeckTransition
@@ -12,6 +38,8 @@
 
 ## 1.3.3 Release notes (11/10/2017)
 ----
+
+This is the last version of this framework to support Swift 3.x. Further development will be done on Swift 4.x
 
 - Corner rounding is now animated
 
