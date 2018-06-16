@@ -81,11 +81,7 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
     }
     
     private var scaleForPresentingView: CGFloat {
-        guard let containerView = containerView else {
-            return 0
-        }
-        
-        return 1 - (ManualLayout.presentingViewTopInset * 2 / containerView.frame.height)
+        return 1
     }
 	
     override var frameOfPresentedViewInContainerView: CGRect {

@@ -45,15 +45,7 @@ final class ManualLayout {
   /// - On iPhone X in portrait, the inset is the full height of the status
   ///   bar
   class var presentingViewTopInset: CGFloat {
-    let statusBarHeight = ManualLayout.statusBarHeight
-    
-    switch statusBarHeight {
-    case 0:     return 8
-    case 20:    return 20
-    case 40:    return 20
-    case 44:    return 44
-    default:    return statusBarHeight
-    }
+    return 0
   }
   
 }
