@@ -262,6 +262,9 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
             pan!.cancelsTouchesInView = false
             presentedViewController.view.addGestureRecognizer(pan!)
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        roundedViewForPresentingView.addGestureRecognizer(tap)
 
         presentCompletion?(completed)
     }
@@ -550,6 +553,10 @@ final class DeckPresentationController: UIPresentationController, UIGestureRecog
         }
         
         return updater.isDismissEnabled
+    }
+    
+    @objc private func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        presentedViewController.dismiss(animated: true, completion: nil)
     }
     
     @objc private func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
